@@ -1,0 +1,50 @@
+% !TEX TS-program = luatex
+% Awesome Source CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/darwiin/awesome-neue-latex-cv
+%
+% Author:
+% Christophe Roger (Darwiin)
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+\documentclass[localFont,alternative]{yaac-another-awesome-cv}
+
+\usepackage{academicons}
+
+\name{Vitor}{Miranda de Souza}
+\tagline{Sustainable Systems Engineer}
+\photo{2.7cm}{Vitor_3x4}
+\socialinfo{
+	%\color{blue}
+	\textcolor{basecolor}{\aiOrcid{\href{https://orcid.org/0000-0002-4357-2901}{ orcid.org/0000-0002-4357-2901}}} \linkedin{vitor-miranda-de-souza-25ba6b14}\\
+	\smartphone{+55 419 9641 9421}
+	\email{vsouza.utfpr@mail.com}\\
+	\address{Avenida Alberto Carazzai, 1640, Cornélio Procópio, Paraná, Brazil}\\
+	\infos{Born October 24\textsuperscript{th}, 1983 (37 years-old) in Curitiba, Paraná}
+}
+
+\begin{document}
+
+	\makecvheader
+
+	\makecvfooter
+		{\textsc{\selectlanguage{english}\today}}
+		{\textsc{Vitor Miranda de Souza - CV}}
+		{\thepage}
+
+	%\input{section_headline}
+	\input{section_experience_short} \newpage		% Section expérience
+	\input{section_scolarite}				% Section scholarité
+	\input{section_competences}	%\vspace{-15pt}			% Section compétence
+	\input{section_langues}					% Section langues
+	%\input{section_interets}				% Section intérêts
+	\input{section_projets}
+	%\input{section_references} 
+	\newpage				% Section références
+	\input{section_publications} \vspace{-12pt}
+	\input{section_referee_and_stats}
+\end{document}
+
