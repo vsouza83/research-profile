@@ -1,0 +1,80 @@
+%%
+% German Latex Letter Template 
+% Use if you want to crate a Letter in DIN A4. You can use it in English and German 
+% as well, just set language at begining of plain text.
+% Created by Jan Boelmann @ Nov. 2016 Jan.boelmann@live.de
+%%
+
+\documentclass[sender,
+    paper=a4,
+    version=last,
+    fontsize=12pt,
+    DIV=12,
+    BCOR=0mm]{scrlttr2}
+\parskip3mm
+\parindent0mm % if you want to have no lineskip
+\usepackage[english,ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+% Set Font: sans serif Latin Modern
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% Set Page layout:
+\usepackage{changepage}
+%\changepage{text height}{text width}{even-side margin}
+%{odd-side margin}{column sep.}
+%{topmargin}{headheight}{headsep}{footskip}
+\changepage{+3cm}{}{}{}{}{}{}{}{-5cm}
+\LoadLetterOption{sender}
+
+\begin{document}
+% Set Appendix text at very end (dubble point will be set automatically)
+\setkomavar*{enclseparator}{Appendix}
+% subject, date, place:
+%\setkomavar{subject}{On becoming an Assistant Professor of Sustainable Complex Adaptive Systems}
+\selectlanguage{english}
+\setkomavar{date}{\today}
+\setkomavar{place}{Cornélio Procópio}
+
+% Set recipient of letter
+\begin{letter}{
+    Prof.dr.ir. Ivo J.B.F. Adan \\
+    Eindhoven University of Technology (Tu/e)\\
+    PO Box 513, \\
+    5600 MB Eindhoven, The Netherlands
+} 
+
+\opening{Dear Prof.dr.ir. Adan,}
+
+% Write here your Letter text. You can choose here the language for typeset. ("english", or "ngerman")
+
+\parindent8mm
+
+I am writing to apply for the position of Assistant Professor in Operations Management (REF.: V39.4656) because I see it as an invaluable, exciting opportunity for many reasons. 
+
+I have been performing research on Sustainable Operations Management since 2011, 
+
+after watching Prof. Carl Folke's lecture in Wageningen. Two of his propositions stunned me: "technological solutions cannot solve cultural problems" - so controversial! -, and "governance is not government". 
+
+What do I want to do for research in sustainable operations management? Ver figura no Evernote
+
+Besides research, I have practical experience with operations management. I spent five years in the automotive industry, leading multidisciplinary groups through the design and development of mechanical parts. I reported project updates to board meetings and followed customers' requirements. In 2010, I changed my focus to academia, and discovered a passion for sustainable development. For my Master's, I developed a conceptual model for sustainable product development, focused on end-of-life. Later, I spent four fruitful years of my PhD: in Wageningen, I followed two courses promoted by Prof. Hofstede on Complex Adaptive Systems, and one course on Biobased Logistics. For my PhD. thesis, I modelled a business process to design eco-effective supply chains. I also explored using the Ecosystem Network Analysis, a model based on information theory implemented in R, as a metric for Resilience. Finally, I proposed a metaphor for Regenerative Supply Networks, upon which I designed a restorative household waste management system. I used Vensim to create a stock and flows model, using its output in an optimisation model developed in XPress IVE. 
+
+In my future research, I intend to model ... the emergence of behavioural change and social interactions to accelerate the transition to a more sustainable society. 
+
+This is not my only passion, however: I am also enthusiastic about academic duties. In 2014, I led the implementation of the Academic Department of Mechanics of the campus I work, and conducted a successful restructure of the bachelor's in Mechanical Engineering. For the past two years now, I have been increasingly adopting active learning in my courses. Adapting teaching activities have been pretty challenging, especially after COVID-19 outbreak: students are much accustomed to expository teaching, still widely used by most professors. Nevertheless, I am receiving satisfactory feedback from the students, and to observe how they develop soft and hard skills inspires me to keep developing my skills in active learning. 
+
+Achieving a sustainable society in the long term is a personal ambition. I can add substantial value through my solid background on mechanical engineering, my experience with design and development and multi-level analysis. I'm confident I can help the Operations, Planning, Accounting \& Control group to make a substantial contribution to research and practice, using my modelling and communication skills and my ability to propose comprehensive, creative solutions. I’m looking forward to discussing the position with you, and I remain available to provide you with any additional information you might need.
+
+%\selectlanguage{english}%Choose language for closing text
+\closing{With kind regards,} % use "Mit freundlich Grüßen" i.e. 
+\vfill
+\encl{\small{Detailed CV with References; Research and Teaching Statement; Sustainable Design Portfolio.}}
+% end of letter
+\end{letter}
+
+\end{document}
+

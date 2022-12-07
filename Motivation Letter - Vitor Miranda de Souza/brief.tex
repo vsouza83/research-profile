@@ -1,0 +1,77 @@
+%%
+% German Latex Letter Template 
+% Use if you want to crate a Letter in DIN A4. You can use it in English and German 
+% as well, just set language at begining of plain text.
+% Created by Jan Boelmann @ Nov. 2016 Jan.boelmann@live.de
+%%
+
+\documentclass[sender,
+    paper=a4,
+    version=last,
+    fontsize=12pt,
+    DIV=13,
+    BCOR=0mm]{scrlttr2}
+\parskip2mm
+\parindent0mm % if you want to have no lineskip
+\usepackage[english,ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+
+% Set Font: sans serif Latin Modern
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% Set Page layout:
+\usepackage{changepage}
+%\changepage{text height}{text width}{even-side margin}
+%{odd-side margin}{column sep.}
+%{topmargin}{headheight}{headsep}{footskip}
+\changepage{+5cm}{}{}{}{}{}{}{}{-5cm}
+\LoadLetterOption{sender}
+
+\begin{document}
+
+
+% Set Appendix text at very end (dubble point will be set automatically)
+%\setkomavar*{enclseparator}{Appendix}
+% subject, date, place:
+\selectlanguage{english}
+\setkomavar{date}{\today}
+\setkomavar{place}{Cornélio Procópio}
+
+%SET POSITION AND RECIPIENT VARIABLES
+\newcommand{\position}{Postdoctoral fellow, Rethinking global raw material supply chains in a post COVID-19 world}
+\newcommand{\recipient}{Kleijn}
+
+% Set recipient of letter
+\begin{letter}{
+    Prof. Dr. Ir. Sander de Leeuw \\
+    Wageningen University and Research (WUR)\\
+    Hollandseweg 1, \\
+    6706 KN Wageningen, The Netherlands
+} 
+
+\opening{Dear Prof. Dr. Ir. de Leeuw,}
+
+% Write here your Letter text. You can choose here the language for typeset. ("english", or "ngerman")
+
+\parindent8mm
+
+I am writing to apply for the position of Assistant Professor on Operations \& Research  Logistics (ORL) group. As a guest of the ORL group, I experienced sustainable development in ways I had only imagined. Living in the countryside have opened my eyes for the severity of problems agriculture can cause, that are yet to be addressed by the Brazilian society. As a sustainable systems engineer, I'm eager to solve such problems, and this position is an invaluable opportunity to engage in it. 
+
+During my years in automotive industry, I successfully conducted multidisciplinary teams through the approval process of production parts in compliance with ISO/TS' standards. In my last year, I had to overcome a quality crisis affecting around 1,500 cars - and the risk of a recall - through intense teamwork, collaborating with people I never met before. In my recent years in academia, I managed to publish articles in relevant journals like the Journal of Cleaner Production and Waste Management. Last year, I teamed with Prof. Fröhling, from the Technical University of Munich (TUM) and Prof. Pigosso from the Technical University of Denmark (DTU) to write a research proposal for the EurotechPostdoc2 2021 programme, call 1. Our proposal on closing resource circularity was ranked 14th overall.
+
+My teaching skills were pushed to a higher level with the COVID-19 pandemic. Adapting to the "new normal" in a short notice was a huge challenge, but ultimately, I managed to set the grounds for developing teaching techniques on problem-solving, for years to come. I have received many positive feedbacks from students, despite they being much more comfortable with expository teaching. For this semester, I also managed to engage two of my bachelor's thesis students into sustainable design: one is working with drone delivery services while the other will design a hybrid vehicle powertrain. I can also give a sound contribution to administrative and managerial activities, since I have conducted the implementation of an Academic Department of Mechanics, and the revision of the bachelor's in Mechanical Engineering curriculum. 
+
+I appreciate your time to read this letter, and I'm looking forward to discussing this position with you. With the skills I developed in industry and academia and with my previous experience with the group, I believe I can bring valuable contribution to the ORL group right from the beginning. I remain available to provide you with any additional information you might need.
+
+%\selectlanguage{english}%Choose language for closing text
+\closing{With kind regards,} % use "Mit freundlich Grüßen" i.e. 
+\vfill
+
+% end of letter
+\end{letter}
+
+\end{document}
+
