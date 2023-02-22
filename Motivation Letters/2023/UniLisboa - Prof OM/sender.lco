@@ -1,0 +1,63 @@
+%%
+% German Latex Letter Template 
+% Use if you want to crate a Letter in DIN A4. You can use it in English and German 
+% as well, just set language at begining of plain text.
+% Created by Jan Boelmann @ Nov. 2016 Jan.boelmann@live.de
+%%
+
+\ProvidesFile{sender.lco}[letter-class-option file]
+
+% symbols: Mobilephone, Phone, E-Mail
+\RequirePackage{marvosym}
+
+% Text of this document (sender.lco) is UTF-8 encoded
+\RequirePackage[utf8]{inputenc}
+
+% if yu wnat some colors...
+\RequirePackage{color}
+
+
+% see Koma script for more detailed descriptions
+% comment or delate if not needed
+\KOMAoptions{
+    foldmarks=true,
+    fromalign=right,
+    footsepline=off,
+    fromurl=off,
+    fromemail=true,
+    fromfax=off,
+    fromphone=false,
+    frommobilephone=true,
+}
+
+% You can define colors here like this...
+%\definecolor{mygray}{gray}{.55}
+%\definecolor{myblue}{rgb}{0.25,0.45,0.75}
+
+% Sender data:
+%\setkomavar{fromphone}[\Telefon~]{+55\,419\,96419421}
+\setkomavar{frommobilephone}[\Mobilefone~]{+55\,419\,9641\,9421}
+\setkomavar{fromemail}[\Letter~]{vsouza.utfpr@gmail.com}
+%\setkomavar{fromurl}[]{http://test.de}
+\setkomavar{backaddress}{}
+\setkomavar{fromaddress}{Vitor Miranda de Souza\\Rua Antonio Feliciano de Oliveira 40\\CEP 86.300-000, Cornélio Procópio, Paraná Brazil}
+
+%MY TWEAKS! DISTANCE BETWEEN LETTER SECTIONS
+%\@setplength{toaddrvpos}{0cm}
+%\@setplength{refvpos}{0cm}
+
+% optical stuff:
+\setkomafont{fromname}{\bfseries\color{black}\LARGE}
+\setkomafont{fromrule}{\color{black}}
+\setkomafont{fromaddress}{\small\rmfamily\mdseries\slshape\color{black}}
+% maybe in blue...
+%\setkomafont{fromaddress}{\small\rmfamily\mdseries\slshape\color{myblue}}
+%\setkomafont{addressee}{\small}
+
+\setkomavar{signature}{Vitor Miranda de Souza.}
+\renewcommand*{\raggedsignature}{\raggedright}
+
+% define vertical distance for signature
+\@setplength{sigbeforevskip}{2cm}
+\endinput
+
